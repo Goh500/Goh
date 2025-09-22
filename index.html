@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff9e6; /* 浅黄色背景 */
+        }
+
+        header {
+            background-color: #ffd700; /* 金色头部背景 */
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px dashed #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        nav button {
+            margin: 0 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ffeaa7;
+            border: 1px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #fdcb6e;
+        }
+
+        section {
+            display: none;
+            margin: 20px;
+            padding: 20px;
+            border: 2px dashed #333;
+            background-color: white;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .welcome-box {
+            text-align: center;
+            padding: 20px;
+            border: 2px dashed #333;
+            margin: 20px;
+            background-color: white;
+        }
+
+        .highlight {
+            font-family: "SimSun", "宋体", serif;
+            font-weight: bold;
+            color: #ffcc00;
+            background-color: #fff9e6;
+            padding: 10px;
+            border: 1px dashed #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px dashed #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🌸 我的个人主页 🌸</h1>
+    </header>
+
+    <nav>
+        <button onclick="showSection('home')">首页</button>
+        <button onclick="showSection('profile')">个人信息</button>
+        <button onclick="showSection('life')">生活碎片</button>
+        <button onclick="showSection('message')">留言板</button>
+    </nav>
+
+    <section id="home" class="active">
+        <div class="welcome-box">
+            <h2>👋 欢迎光临！</h2>
+            <p>这里是[你的名字]的个人主页 😊</p >
+            <p>🌈 探索我的世界，发现更多精彩！</p >
+        </div>
+        <p>首页内容介绍... 🏠</p >
+    </section>
+
+    <section id="profile">
+        <h2>👤 个人信息</h2>
+        <p>姓名：[你的名字]</p >
+        <p>年龄：[你的年龄]</p >
+        <p>职业：[你的职业]</p >
+        <p>爱好：[你的爱好] 🎨</p >
+    </section>
+
+    <section id="life">
+        <h2>📸 生活碎片</h2>
+        <p>这里记录我的日常生活... 🌻</p >
+        <p>📅 2023-10-01：今天去了公园散步！</p >
+        <p>📅 2023-10-05：学会了一道新菜！</p >
+    </section>
+
+    <section id="message">
+        <h2>💬 留言板</h2>
+        <p>欢迎留言！ 📝</p >
+        <textarea placeholder="请输入你的留言..." style="width: 100%; height: 100px; margin: 10px 0;"></textarea>
+        <button onclick="alert('留言提交成功！')">提交留言</button>
+    </section>
+
+    <footer>
+        <p>📧 联系方式：[你的邮箱] | 📱 电话：[你的电话]</p >
+        <p>© 2023 我的个人主页 🌐</p >
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // 隐藏所有section
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // 显示目标section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
