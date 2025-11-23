@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晨光阅读会 · Morning Reading Club</title>
+    <style>
+        /* 3. 必须声明的 .page 样式，仅修改背景色 */
+        .page {
+            display: inline-block;
+            background-color: #FFA54C; /* 爱马仕橙背景色 */
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+            padding: 25px; /* 增加内边距以提升美观度和可读性 */
+            margin: 20px auto; /* 使页面在浏览器中居中 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft Yahei", sans-serif;
+        }
+
+        /* 5. 必须包含的选择器 */
+        
+        /* ③ 并集选择器 */
+        h1, h2, h3, h4, h5, h6 {
+            color: #3A2E2F;
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            border-bottom: 2px solid #503A23;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+        }
+        
+        h3 {
+            font-size: 1.3em;
+        }
+
+        /* ⑥ 伪元素 */
+        p::first-letter {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #503A23;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+        }
+
+        /* 注意：div::first-line 会作用于页面中所有 div 的第一行文本，包括标题区、介绍区等 */
+        div::first-line {
+            line-height: 1.8;
+        }
+        
+        /* 通用段落样式 */
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+            font-size: 1.05em;
+            color: #2C2422;
+        }
+
+        /* ④ ID 选择器：强调重要提示 */
+        p#intro {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #D2322D;
+            background-color: #FFE4B5;
+            padding: 12px 15px;
+            border-left: 5px solid #D2322D;
+            margin: 25px 0;
+        }
+        
+        /* 表格基础样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 2px solid #503A23;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #FFD700;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #FFF8DC;
+        }
+
+        /* ① 后代选择器：表格中的链接 */
+        div table a {
+            color: #1E88E5;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        /* ② 链接伪类 */
+        a:link {
+            color: #1976D2;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #7B1FA2;
+        }
+
+        a:hover {
+            color: #FF5722;
+            text-decoration: underline;
+            font-size: 1.05em;
+        }
+
+        a:active {
+            color: #FF0000;
+        }
+
+        /* ⑤ 带类名的链接 */
+        a.red {
+            color: #FFFFFF;
+            background-color: #F44336;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-right: 15px;
+            display: inline-block; /* 让链接可以像块级元素一样设置边距 */
+        }
+
+        a.blue {
+            color: #FFFFFF;
+            background-color: #2196F3;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        /* 底部公告区容器样式 */
+        .notice {
+            background-color: #FFF8DC;
+            padding: 15px;
+            border: 2px dashed #503A23;
+            margin-top: 30px;
+        }
+        
+        .notice p {
+            margin: 8px 0;
+            font-style: italic;
+        }
+        
+        /* 链接区域容器，用于美化布局 */
+        .link-area {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #FFE4B5;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 3. 在 body 中调用 .page 样式 -->
+    <div class="page">
+
+        <!-- 4. ① 顶部标题区 -->
+        <div>
+            <h1>晨光阅读会 · Morning Reading Club</h1>
+        </div>
+
+        <!-- 4. ② 活动介绍区 -->
+        <div>
+            <h2>活动介绍</h2>
+            <p>清晨，当第一缕阳光穿透薄雾，洒在窗台，世界便从沉睡中缓缓苏醒。这是一天中最宁静、最富诗意的时刻，也是与灵魂对话、汲取知识养分的黄金时段。晨光阅读会，正是为了守护这份美好而生。我们希望搭建一个平台，让热爱阅读的朋友们能在晨曦中相聚，共同探索书中的奇妙世界。</p>
+            <p>在这里，没有喧嚣的打扰，只有书页翻动的沙沙声和思想碰撞的火花。我们定期精选经典与新锐书籍，涵盖文学、历史、哲学、科普等多个领域。无论你是学生、职场人士，还是退休的智者，只要你怀揣对阅读的热爱，渴望在清晨的时光里寻求一份内心的丰盈，这里就是你的精神家园。</p>
+            <!-- 重要提示 -->
+            <p id="intro">重要提示：为保证活动质量，请提前10分钟到场签到，并携带当期推荐阅读书目。活动期间，请将手机调至静音或震动模式，共同维护一个安静的阅读环境。</p>
+        </div>
+
+        <!-- 4. ③ 活动报名信息表格区 -->
+        <div>
+            <h3>本期晨读成员</h3>
+            <table>
+                <tr>
+                    <th>姓名</th>
+                    <th>职业/身份</th>
+                    <th>本期推荐书目</th>
+                    <th>累计参与次数</th>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td><a href="https://book.douban.com/subject/26979890/" target="_blank">《深度工作》</a></td>
+                    <td>6次</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>自由撰稿人</td>
+                    <td><a href="https://book.douban.com/subject/1084336/" target="_blank">《小王子》</a></td>
+                    <td>4次</td>
+                </tr>
+                <tr>
+                    <td>Emily Johnson</td>
+                    <td>大学英语教师</td>
+                    <td><a href="https://book.douban.com/subject/1770782/" target="_blank">《The Alchemist》</a></td>
+                    <td>8次</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 4. ④ 页面链接区 -->
+        <div class="link-area">
+            <a href="https://hongchenwusdnu.github.io/bookstore/job4.html" class="red" target="_blank">查看往期活动照片</a>
+            <a href="job3.html" class="blue" target="_blank">在线咨询活动详情</a>
+        </div>
+
+        <!-- 4. ⑤ 底部公告区 -->
+        <div class="notice">
+            <p>公告1：下一期活动将于下周六（5月20日）早上7:30准时开始，主题为"科幻与未来"，推荐书目为刘慈欣的《三体》。<br>报名通道已开启，名额有限，请尽快联系管理员锁定席位。</p>
+            <p>公告2：为庆祝阅读会成立一周年，我们将在6月份举办"我最爱的一本书"分享会，并评选出最受欢迎的分享者，赠送精美图书礼包一份。</p>
+            <p>公告3：为方便大家交流，我们已建立官方微信群。<br>想要加入的朋友请添加管理员微信（微信号：morning_reading_club），备注"阅读会"即可。</p>
+        </div>
+
+    </div>
+</body>
+</html>
